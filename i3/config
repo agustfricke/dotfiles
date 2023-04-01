@@ -41,10 +41,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -172,9 +172,12 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+
 bar {
-    	tray_padding 1
+      status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
     	strip_workspace_numbers yes
+      position top
+      tray_output DP-4
 
     colors {
             separator  #1f222d
@@ -208,5 +211,17 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-exec_always feh --bg-fill /home/agust/Media/Pictures/Wallpaper.jpg
+exec_always feh --bg-fill /home/agust/Pictures/Wallpapers/puente.png
 exec xset r rate 300 50 &
+
+default_border pixel 1  
+default_floating_border pixel 1 
+
+# Rofi launcher -- the dmenu alternative
+bindsym Control+Escape exec --no-startup-id rofi -show drun
+
+
+
+
+
+
