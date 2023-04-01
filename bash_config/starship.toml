@@ -1,0 +1,14 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[package]
+disabled = true
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜]()' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[python]
+symbol = '👾 '
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
