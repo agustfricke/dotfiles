@@ -217,11 +217,14 @@ exec_always feh --bg-fill /home/agust/Pictures/Wallpapers/puente.png
 
 exec xset r rate 300 50 &
 
-default_border pixel 1  
-default_floating_border pixel 1 
+# default_border pixel 1
+# default_floating_border pixel 1
+
+new_window pixel 
 
 # Rofi launcher -- the dmenu alternative
 bindsym Control+Escape exec --no-startup-id rofi -show drun
+bindsym Control+Tab  exec --no-startup-id rofi -show run
 
 
 
