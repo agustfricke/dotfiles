@@ -5,7 +5,7 @@
 - Rofi application launcher
 - Picom for blur effect
 - Lunar Vim conf (neovim)
-- Json file conf for vscode
+- Json file for vscode
 - Personal bashrc file
 
 
