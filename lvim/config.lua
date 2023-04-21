@@ -6,6 +6,7 @@
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.relativenumber = true
+vim.opt.guicursor = ""
 
 -- general
 lvim.log.level = "info"
@@ -32,16 +33,12 @@ vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""
 local cmp = require "cmp"
 
-lvim.builtin.cmp.mapping["<Tab>"] = function(fallback)
-  if cmp.visible() then
-    cmp.select_next_item()
+lvim.builtin.cmp.mapping["<C-a>"] = function(fallback)
+  local copilot_keys = vim.fn["copilot#Accept"]()
+  if copilot_keys ~= "" then
+    vim.api.nvim_feedkeys(copilot_keys, "i", true)
   else
-    local copilot_keys = vim.fn["copilot#Accept"]()
-    if copilot_keys ~= "" then
-      vim.api.nvim_feedkeys(copilot_keys, "i", true)
-    else
-      fallback()
-    end
+    fallback()
   end
 end
 
@@ -50,7 +47,7 @@ end
 -- lvim.builtin.whichkey.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 
 -- -- Change theme settings
-lvim.colorscheme = "lunar"
+lvim.colorscheme = "tokyonight.night"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -103,20 +100,22 @@ lvim.lsp.installer.setup.automatic_installation = false
 --     filetypes = { "typescript", "typescriptreact" },
 --   },
 -- }
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  { command = "flake8", filetypes = { "python" } },
-  {
-    command = "shellcheck",
-    args = { "--severity", "warning" },
-  },
-}
+-- local linters = require "lvim.lsp.null-ls.linters"
+-- linters.setup {
+--   { command = "flake8", filetypes = { "python" } },
+--   {
+--     command = "shellcheck",
+--     args = { "--severity", "warning" },
+--   },
+-- }
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
-lvim.plugins = {
-  -- { "folke/tokyonight.nvim" },
-  { "github/copilot.vim" },
-}
+-- lvim.plugins = {
+--   { "folke/tokyonight.nvim" },
+--   { "github/copilot.vim" },
+-- }
+
+
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
 -- vim.api.nvim_create_autocmd("FileType", {
