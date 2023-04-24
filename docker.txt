@@ -1,0 +1,11 @@
+sudo docker ps -a 
+docker images -a
+
+docker rm (container id)
+docker rmi <your-image-id>
+
+service docker status / start / stop / restart
+
+docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
+docker run -p 6379:3679 -d redis 
+
