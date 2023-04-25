@@ -1,7 +1,7 @@
 window:
   padding:
     x: 7
-    y: 10
+    y: 7
   dynamic_padding: true
   class:
     instance: Alacritty
