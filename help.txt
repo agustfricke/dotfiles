@@ -28,3 +28,7 @@ Install docker -> change vera for jammy before install and update
 
 lunarvim 
 :LspSettings pyright
+
+COPY FROM AND TO CLIPBOARD
+sudo apt-get install -y xclip
+vim.opt.clipboard = "unnamedplus"
