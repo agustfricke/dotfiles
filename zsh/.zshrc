@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:/home/agust/.nodejs/bin
+export PATH=$PATH:/home/agust/.nvim/bin
 # export PATH=/home/agust/.local/bin:$PATH
 export PATH="$PATH:/home/$USER/.local/bin"
 
@@ -116,11 +117,5 @@ alias update='sudo apt update && sudo apt upgrade -y'
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+. "$HOME/.cargo/env"
 
-# pnpm
-# export PNPM_HOME="/home/agust/.local/share/pnpm"
-# case ":$PATH:" in
-#   *":$PNPM_HOME:"*) ;;
-#   *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
-# pnpm end

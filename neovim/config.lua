@@ -7,6 +7,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.relativenumber = true
 vim.opt.guicursor = ""
+vim.opt.clipboard = "unnamedplus"
 
 -- general
 lvim.log.level = "info"
@@ -47,7 +48,7 @@ end
 -- lvim.builtin.whichkey.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 
 -- -- Change theme settings
-lvim.colorscheme = "tokyonight.night"
+lvim.colorscheme = "tokyonight-moon"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -110,10 +111,10 @@ lvim.lsp.installer.setup.automatic_installation = false
 -- }
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
--- lvim.plugins = {
---   { "folke/tokyonight.nvim" },
---   { "github/copilot.vim" },
--- }
+lvim.plugins = {
+  { "folke/tokyonight.nvim" },
+  { "github/copilot.vim" },
+}
 
 
 
