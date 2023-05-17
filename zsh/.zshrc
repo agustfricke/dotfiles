@@ -103,6 +103,24 @@ export PATH=$PATH:/home/agust/.nodejs/bin
 # export PATH=/home/agust/.local/bin:$PATH
 export PATH="$PATH:/home/$USER/.local/bin"
 
+export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:/home/agust/personal/term/SNET-Client-API
+
 
 alias nv='lvim'
-alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
+alias update='sudo apt update && sudo apt upgrade -y'
+
+# bun completions
+[ -s "/home/agust/.bun/_bun" ] && source "/home/agust/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+# export PNPM_HOME="/home/agust/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
+# pnpm end
