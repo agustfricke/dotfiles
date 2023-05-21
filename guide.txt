@@ -108,7 +108,8 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 rm .config/lvim/config.lua
 cp ~/dotfiles/lvim/config.lua
 :LspSettings pyright
-paste -> {
+paste -> 
+{
   "python.analysis.typeCheckingMode": "off"
 }
 

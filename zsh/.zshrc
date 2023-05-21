@@ -99,14 +99,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 export PATH=$PATH:/home/agust/.nodejs/bin
-export PATH=$PATH:/home/agust/.nvim/bin
-# export PATH=/home/agust/.local/bin:$PATH
-export PATH="$PATH:/home/$USER/.local/bin"
-
 export PATH=$PATH:/usr/local/go/bin
-# export PATH=$PATH:/home/agust/personal/term/SNET-Client-API
-
+export PATH=$PATH:/home/agust/.nvim/bin
+export PATH=$PATH:/usr/local/bin/main
 
 alias nv='lvim'
 alias update='sudo apt update && sudo apt upgrade -y'
