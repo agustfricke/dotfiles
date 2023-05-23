@@ -3,6 +3,7 @@
 # sudo apt update && sudo apt upgrade -y
 # sudo apt install i3 -> logout -> select i3 -> login
 # $_ lxappearance -> set theme
+# sudo apt-get install xclip
 
 # Some Dependencies
 sudo apt install git
