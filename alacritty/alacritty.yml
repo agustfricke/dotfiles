@@ -72,3 +72,7 @@ selection:
 
 key_bindings:
   - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
+
+term:
+  env:
+    TERM: xterm-256color
