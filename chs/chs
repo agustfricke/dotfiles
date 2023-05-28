@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -z "$1" ] || [ -z "$2" ]; then
+  echo "You must provide the language and the search term."
+  exit 1
+fi
+
+url="https://cht.sh/$1/$2"
+
+response=$(curl -s "$url")
+
+if [ $? -ne 0 ]; then
+  echo "Error occurred while making the API request."
+  exit 1
+fi
+
+echo "$response"

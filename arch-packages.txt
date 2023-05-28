@@ -25,4 +25,8 @@ xclip
 neovim
 lxappearance
 arc-theme
+docker
+pulseaudio 
+pulseaudio-alsa 
+pavucontrol
 
