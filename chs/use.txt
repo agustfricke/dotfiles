@@ -1,3 +1,0 @@
-sudo mv chs /usr/local/bin/chs
-chs [lang] [term]
-
