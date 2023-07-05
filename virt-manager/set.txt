@@ -1,0 +1,3 @@
+
+sudo virsh net-start default
+sudo virsh net-info default
