@@ -99,6 +99,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias n="nvim"
-# alias tmux="TERM=screen-256color-bce tmux"
+alias nv="nvim"
+alias tmux="TERM=screen-256color-bce tmux"
 
+export GOPATH="$HOME/.go" 
+export PATH=$PATH:$GOPATH/bin 
+
+
+# bun completions
+[ -s "/home/agust/.bun/_bun" ] && source "/home/agust/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

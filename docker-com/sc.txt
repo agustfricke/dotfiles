@@ -1,4 +1,4 @@
-sudo docker run --name some-postgres -e POSTGRES_USER=agust -e POSTGRES_PASSWORD=agust -d postgres
+docker run -d -p 5432:5432 --name postgres-container -e POSTGRES_USER=agust -e POSTGRES_PASSWORD=agust -e POSTGRES_DB=some-postgres postgres
 
 sudo systemctl status docker
 
