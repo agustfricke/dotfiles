@@ -103,7 +103,8 @@ alias vim="nvim"
 alias t="tgpt"
 alias tmux="TERM=screen-256color-bce tmux"
 alias key="screenkey --geometry 711x900+1812+0 -s medium --opacity 0.4"
-alias small_key="screenkey --geometry 600x850+1300+20 -s medium --opacity 0.4"
+alias k = "screenkey --geometry 600x850+3200+20 -s medium  --opacity 0.8"
+
 
 export GOPATH="$HOME/.go" 
 export PATH=$PATH:$GOPATH/bin 
