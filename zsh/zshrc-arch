@@ -99,8 +99,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nv="nvim"
+alias vim="nvim"
+alias t="tgpt"
 alias tmux="TERM=screen-256color-bce tmux"
+alias key="screenkey --geometry 711x900+1812+0 -s medium --opacity 0.4"
+alias small_key="screenkey --geometry 600x850+1300+20 -s medium --opacity 0.4"
 
 export GOPATH="$HOME/.go" 
 export PATH=$PATH:$GOPATH/bin 
