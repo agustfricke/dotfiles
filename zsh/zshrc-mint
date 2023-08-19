@@ -99,20 +99,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
 
-export PATH=$PATH:/home/agust/.nodejs/bin
+export PATH=$PATH:/usr/local/nvim/bin
+
+alias tmux="TERM=screen-256color-bce tmux"
+
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/agust/.nvim/bin
-export PATH=$PATH:/usr/local/bin/main
+export GOPATH="$HOME/.go" 
 
-alias nv='lvim'
-alias update='sudo apt update && sudo apt upgrade -y'
-
-# bun completions
-[ -s "/home/agust/.bun/_bun" ] && source "/home/agust/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-. "$HOME/.cargo/env"
-
+export PATH=$PATH:/usr/local/node/bin
