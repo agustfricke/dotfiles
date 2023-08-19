@@ -1,6 +1,0 @@
-Loader
-Si queda clavado reinicar machine
-Poner prebooter
-Loader
-Config
-Desktop

@@ -1,4 +1,4 @@
 require('rose-pine').setup({
-	vim.cmd('colorscheme rose-pine')
+    disable_background = true,
 })
-
+vim.cmd('colorscheme rose-pine')
