@@ -4,22 +4,19 @@
 
 # Some Dependencies
 sudo apt update && sudo apt upgrade -y
-sudo apt install i3 
-sudo apt install git
-sudo apt install build-essential
-sudo apt install feh
-sudo apt install lxappearance
-sudo apt install arc-theme
-sudo apt-get install xclip
+sudo apt install i3 -y
+sudo apt install git -y
+sudo apt install build-essential -y
+sudo apt install feh -y
+sudo apt install lxappearance -y
+sudo apt install arc-theme -y
+sudo apt-get install xclip -y
 
 # i3 blocks
-git clone https://github.com/Airblader/i3blocks-gaps i3blocks
-cd i3blocks
+git clone https://github.com/Airblader/i3blocks-gaps ~/i3blocks
+cd ~/i3blocks
 make clean debug
 sudo make install 
-
-# Clone repo from github
-git clone https://github.com/agustfricke/dotfiles.git
 
 # i3 config
 cp -r ~/dotfiles/i3 ~/.config/
@@ -30,16 +27,19 @@ sudo apt install rofi
 cp -r ~/dotfiles/rofi ~/.config/
 
 # fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip ~/FiraCode.zip
 unzip FiraCode.zip -d ~/.local/share/fonts
 
-# Rust & Cargo
-curl https://sh.rustup.rs -sSf | sh
+# Descargar y ejecutar el script de instalación de Rust
+curl https://sh.rustup.rs -sSf | sh <<EOF
+1
+EOF
+# Cargar el entorno de Rust
 source "$HOME/.cargo/env"
 
 # nodejs 
-wget https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.xz
-tar -xf node-v18.16.0-linux-x64.tar.xz
+wget https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.xz ~/node.tar.xz
+tar -xf node.tar.xz
 mv ~/node-v18.16.0-linux-x64 ~/.node
 
 # go
@@ -47,12 +47,12 @@ wget https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf ~/go1.20.4.linux-amd64.tar.gz
 
 # alacritty
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
-sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+git clone https://github.com/alacritty/alacritty.git ~/alacritty
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 -y
+cd ~/alacritty
 cargo build --release
-sudo cp target/release/alacritty /usr/local/bin
-cp ~/dotfiles/alacritty ~/.config
+sudo cp ~/alacritty/target/release/alacritty /usr/local/bin
+cp -r ~/dotfiles/alacritty ~/.config
 
 # docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -89,16 +89,16 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 # Install OBS
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt update
-sudo apt install obs-studio
+sudo apt update -y
+sudo apt install obs-studio -y
 
 # Install audacity
-sudo apt install audacity
+sudo apt install audacity -y
 
 # Install Kdenlive
-sudo add-apt-repository ppa:kdenlive/kdenlive-stable
-sudo apt update
-sudo apt install kdenlive
+sudo add-apt-repository ppa:kdenlive/kdenlive-stable 
+sudo apt update -y
+sudo apt install kdenlive -y
 
 # zsh
 sudo apt install zsh

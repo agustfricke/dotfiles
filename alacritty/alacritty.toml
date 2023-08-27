@@ -26,7 +26,7 @@ background = "#11121D"
 foreground = "#a9b1d6"
 
 [font]
-size = 14
+size = 22
 
 [font.bold]
 family = "Fira Code Nerd Font"
@@ -64,3 +64,6 @@ opacity = 1
 general = "Alacritty"
 instance = "Alacritty"
 
+[window.padding]
+x = 4
+y = 4

@@ -1,5 +1,12 @@
 # dotfiles
 
+### Instalar y usar linux mint
+```bash
+git clone https://github.com/agustfricke/dotfiles
+cd dotfiles
+./install
+```
+
 ## My personal dotfiles (apply to arch linux and linux mint)
 
 - Guide to install arch linux
