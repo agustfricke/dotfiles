@@ -4,12 +4,10 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
-  'gopls',
 })
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
-
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -39,7 +37,8 @@ lsp.set_preferences({
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
-  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+  	vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 end)
 
 lsp.setup()
