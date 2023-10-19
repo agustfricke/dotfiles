@@ -1,6 +1,6 @@
 #!/bin/bash
 
-directorio_principal=""
+directorio_principal="/"
 
 texto_a_buscar=""
 nuevo_texto=""
