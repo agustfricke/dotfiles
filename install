@@ -109,6 +109,13 @@ chsh -s /bin/zsh root
 cp ~/dotfiles/zsh/zshrc-mint ~/.zshrc
 source .zshrc
 
+# Delete folders
+sudo rm -r alacritty Desktop i3blocks node-v18.16.0-linux-x64.tar.xz go1.21.3.linux-amd64.tar.gz Music  Public Templates dotfiles
+
+# Create folders
+mkdir personal
+mkdir work
+
 # GitHub ssh
 ssh-keygen -t ed25519 -C "agustfricke@protonmail.com"
 eval "$(ssh-agent -s)"
