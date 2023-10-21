@@ -99,12 +99,6 @@ sudo apt install kdenlive -y
 sudo apt install tmux -y
 cp ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
-# zsh
-sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-chsh -s /bin/zsh $USER
-chsh -s /bin/zsh root
-
 # zsh config
 cp ~/dotfiles/zsh/zshrc-mint ~/.zshrc
 source .zshrc
@@ -122,4 +116,8 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 
-echo "Add ssh key GitHub, run lxappearance to set a new theme then reboot machine!"
+# zsh
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+chsh -s /bin/zsh $USER
+chsh -s /bin/zsh root
