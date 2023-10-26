@@ -95,6 +95,10 @@ sudo add-apt-repository ppa:kdenlive/kdenlive-stable -y
 sudo apt update -y
 sudo apt install kdenlive -y
 
+# fzf
+sudo apt install fzf -y
+sudo mv ~/dotfiles/tools/f /usr/local/bin
+
 # Install tmux
 sudo apt install tmux -y
 cp ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
