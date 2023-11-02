@@ -13,3 +13,6 @@ cd dotfiles
 ```bash
 lxappearance
 ```
+
+![Screenshot 2023-11-02 03-14-47](https://github.com/agustfricke/dotfiles/assets/110266171/1da8e3c0-dc1e-4130-a33b-f642def1f910)
+![Screenshot 2023-11-02 03-13-55](https://github.com/agustfricke/dotfiles/assets/110266171/4b1273a1-1a15-4297-bd24-c207cf5e6b16)

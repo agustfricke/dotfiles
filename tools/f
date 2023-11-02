@@ -5,7 +5,7 @@ personal_dir=~/personal
 work_dir=~/work
 
 # Utiliza find para listar todos los directorios en ~/personal
-directories=$( (find "$personal_dir" -mindepth 1 -maxdepth 1 -type d && find "$work_dir" -mindepth 1 -maxdepth 1 -type d) | fzf)
+directories=$( (find "$personal_dir" -mindepth 0 -maxdepth 2 -type d && find "$work_dir" -mindepth 1 -maxdepth 1 -type d) | fzf)
 
 # Verifica si se seleccionó un directorio
 if [ -n "$directories" ]; then
