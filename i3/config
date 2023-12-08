@@ -93,10 +93,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -175,11 +175,11 @@ mode "resize" {
 
 bar {
       status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
-    	strip_workspace_numbers yes
+    	# strip_workspace_numbers yes
       position top
       tray_output DP-4
 
-    colors {
+      colors {
             separator  #1f222d
             background #1f222d
             statusline #81a1c1
@@ -191,21 +191,9 @@ bar {
             urgent_workspace   #1f222d #1f222d    #ee829f
             binding_mode       #1f222d #81a1c1    #2e3440
     }
+
 }
 
-    ##START THEMING WM
-
-    # Window color settings
-    # class                 border  backgr. text    indicator
-    client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
-    client.unfocused        #2e3440 #1f222d #888888 #1f222d
-    client.focused_inactive #2e3440 #1f222d #888888 #1f222d
-    client.placeholder      #2e3440 #1f222d #888888 #1f222d
-    client.urgent           #900000 #900000 #ffffff #900000
-
-    client.background       #242424
-
-    ##STOP THEMING WM
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -223,11 +211,5 @@ exec xset r rate 300 50 &
 new_window pixel 
 
 # Rofi launcher -- the dmenu alternative
-bindsym Control+Escape exec --no-startup-id rofi -show drun
-bindsym Control+Tab  exec --no-startup-id rofi -show run
-
-
-
-
-
-
+bindsym $mod+space exec --no-startup-id rofi -show drun
+bindsym $mod+Shift+period exec systemctl suspend

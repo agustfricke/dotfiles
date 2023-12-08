@@ -11,6 +11,7 @@ sudo apt install arc-theme -y
 sudo apt-get install xclip -y
 
 # i3 blocks
+# clone this repo in .config/i3blocks and rename as scripts https://github.com/vivien/i3blocks-contrib/tree/master
 git clone https://github.com/Airblader/i3blocks-gaps ~/i3blocks
 cd ~/i3blocks
 make clean debug
