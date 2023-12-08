@@ -210,6 +210,3 @@ exec xset r rate 300 50 &
 
 new_window pixel 
 
-# Rofi launcher -- the dmenu alternative
-bindsym $mod+space exec --no-startup-id rofi -show drun
-bindsym $mod+Shift+period exec systemctl suspend
