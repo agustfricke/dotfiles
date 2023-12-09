@@ -1,5 +1,5 @@
 # !/bin/bash
-
+# Este script no esta terminado!
 # Install dependencies
 sudo apt update && sudo apt upgrade -y
 sudo apt install i3 -y
@@ -17,13 +17,12 @@ cd ~/i3blocks
 make clean debug
 sudo make install
 
+
 # config for i3 and i3blocks
 cp -r ~/dotfiles/i3 ~/.config/
 cp -r ~/dotfiles/i3blocks ~/.config/
-
-# rofi
-sudo apt install rofi -y
-cp -r ~/dotfiles/rofi ~/.config/
+git clone https://github.com/vivien/i3blocks-contrib/tree/master ~/.config/i3blocks/
+mv ~/.config/i3blocks-contrib scripts
 
 # Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip ~/FiraCode.zip
@@ -34,7 +33,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source "$HOME/.cargo/env"
 
 # Install Node
-wget https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.xz ~/
+wget https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.xz -P ~/
 tar -xf ~/node-v18.16.0-linux-x64.tar.xz
 mv ~/node-v18.16.0-linux-x64 ~/.node
 
@@ -69,7 +68,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # Neovim
 wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/nv
+sudo mv nvim.appimage /usr/local/bin/vim
 
 # Wallpaper
 mv ~/dotfiles/Wallpapers ~/Pictures
@@ -104,9 +103,6 @@ sudo mv ~/dotfiles/tools/f /usr/local/bin
 sudo apt install tmux -y
 cp ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
-# zsh config
-cp ~/dotfiles/zsh/zshrc-mint ~/.zshrc
-source .zshrc
 
 # Delete folders
 sudo rm -r alacritty Desktop i3blocks node-v18.16.0-linux-x64.tar.xz go1.21.3.linux-amd64.tar.gz Music  Public Templates dotfiles
@@ -140,5 +136,7 @@ cp -r ~/dotfiles/nvim ~/.config/nvim
 # zsh
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+# zsh config
+cp ~/dotfiles/zsh/zshrc-mint ~/.zshrc
 chsh -s /bin/zsh $USER
 chsh -s /bin/zsh root

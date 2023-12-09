@@ -1,6 +1,9 @@
 # personal dotfiles for linux mint
 
 ### Install
+
+#### The install script is not finish, you would have to debug
+
 ```bash
 git clone https://github.com/agustfricke/dotfiles.git
 cd dotfiles
@@ -10,6 +13,7 @@ cd dotfiles
 ### After install, enter in **~/.config/nvim/lua/agust/packer.lua** and **:so** and **:PackerSync**
 
 ### Set cursor widget theme
+
 ```bash
 lxappearance
 ```
