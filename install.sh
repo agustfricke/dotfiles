@@ -28,6 +28,8 @@ cp -r $DOTFILES_DIR/i3blocks $CONFIG_DIR/
 git clone https://github.com/vivien/i3blocks-contrib.git ~/scripts
 mv ~/scripts ~/.config/i3blocks
 
+cp -r ~/dotfiles/rofi ~/.config
+
 # Install Nerd Fonts
 wget -O ~/FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip
 unzip ~/FiraCode.zip -d $FONTS_DIR
