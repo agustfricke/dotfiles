@@ -40,13 +40,13 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source "$HOME/.cargo/env"
 
 # Install Node
-wget https://nodejs.org/dist/$NODE_VERSION/node-$NODE_VERSION-linux-x64.tar.xz -P ~/
-tar -xf ~/node-$NODE_VERSION-linux-x64.tar.xz
-mv ~/node-$NODE_VERSION-linux-x64 ~/.node
+wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/
+mkdir -p ~/.node
+tar -xf ~/node-v20.10.0-linux-x64.tar.xz -C ~/.node --strip-components=1
 
 # Install Go
-wget https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf ~/go$GO_VERSION.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz -P ~/
+sudo tar -C /usr/local -xzf ~/go1.21.5.linux-amd64.tar.gz
 
 # Install Alacritty
 git clone https://github.com/alacritty/alacritty.git ~/alacritty
@@ -108,7 +108,21 @@ sudo apt install tmux -y
 cp $DOTFILES_DIR/tmux/tmux.conf ~/.tmux.conf
 
 # Delete folders
-sudo rm -r ~/alacritty ~/Desktop ~/i3blocks ~/node-$NODE_VERSION-linux-x64.tar.xz ~/go$GO_VERSION.linux-amd64.tar.gz Music Public Templates $DOTFILES_DIR
+directories_to_remove=(
+    ~/alacritty
+    ~/Desktop
+    ~/i3blocks
+    ~/node-*.tar.xz  
+    ~/go*.linux-amd64.tar.gz
+    ~/Music
+    ~/Public
+    ~/Templates
+    $DOTFILES_DIR
+)
+
+for item in "${directories_to_remove[@]}"; do
+    sudo rm -r "$item"
+done
 
 # Create folders
 mkdir personal
