@@ -12,6 +12,7 @@ GO_VERSION=1.21.3
 # Install dependencies
 sudo apt update && sudo apt upgrade -y
 sudo apt install i3 git acpi build-essential feh lxappearance arc-theme xclip -y
+git clone https://github.com/agustfricke/dotfiles.git ~/dotfiles
 
 # Clone i3blocks-contrib repo
 git clone https://github.com/vivien/i3blocks-contrib.git $I3BLOCKS_CONTRIB_DIR
