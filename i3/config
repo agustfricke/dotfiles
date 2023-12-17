@@ -200,8 +200,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 exec_always feh --bg-fill /home/agust/Pictures/Wallpapers/puente.png
-bindsym $mod+space exec rofi -show drun
 exec xset r rate 300 50 &
+bindsym $mod+space exec --no-startup-id rofi -show drun
 
 # default_border pixel 1
 # default_floating_border pixel 1
