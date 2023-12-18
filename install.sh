@@ -161,3 +161,6 @@ curl -sLO https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh
 zsh ./install.zsh --branch release-v1
 
 cp ~/dotfiles/zsh/.zshrc ~/.zshrc
+
+rm -r ~/.local/share/zap/plugins/zap-prompt
+cp ~/dotfiles/zsh/zap-prompt ~/.local/share/zap/plugins
