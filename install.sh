@@ -143,16 +143,6 @@ sudo apt install zsh -y
 chsh -s /bin/zsh $USER
 chsh -s /bin/zsh root
 
-# Write to new .zshrc
-echo '' >> ~/.zshrc
-echo 'alias tmux="TERM=screen-256color-bce tmux"' >> ~/.zshrc
-echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
-echo 'export GOPATH="$HOME/.go"' >> ~/.zshrc
-echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.zshrc
-echo 'export PATH=$PATH:/home/agust/.node/bin' >> ~/.zshrc
-echo 'export PNPM_HOME="/home/agust/.local/share/pnpm"' >> ~/.zshrc
-echo 'case ":$PATH:" in *":$PNPM_HOME:"*) ;; *) export PATH="$PNPM_HOME:$PATH" ;; esac' >> ~/.zshrc
-
 # pnpm
 wget -qO- https://get.pnpm.io/install.sh | sh -
 

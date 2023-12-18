@@ -78,7 +78,8 @@ separator=false
 
 [wifi]
 #INTERFACE=wlp3s0
-label=wifi:
+label=  
+command=$SCRIPT_DIR/wifi/wifi
 interval=10
 separator=false
 
@@ -112,7 +113,7 @@ interval=30
 # Date Time
 #
 [time]
-command=date '+%H:%M:%S - %d-%m-%Y'
+command=date '+   %H:%M      %d-%m  '
 interval=5
 
 # Generic media player support
