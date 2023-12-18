@@ -6,8 +6,6 @@ DOTFILES_DIR=~/dotfiles
 CONFIG_DIR=~/.config
 FONTS_DIR=~/.local/share/fonts
 I3BLOCKS_CONTRIB_DIR=$CONFIG_DIR/i3blocks-contrib
-NODE_VERSION=v18.16.0
-GO_VERSION=1.21.3
 
 # Install dependencies
 sudo apt update && sudo apt upgrade -y
@@ -109,6 +107,7 @@ cp $DOTFILES_DIR/tmux/tmux.conf ~/.tmux.conf
 
 # Delete folders
 directories_to_remove=(
+    ~/FiraCode.zip
     ~/alacritty
     ~/Desktop
     ~/i3blocks
@@ -149,9 +148,9 @@ cp -r $DOTFILES_DIR/nvim $CONFIG_DIR/
 
 # Install zsh
 sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
 
 # Copy zsh config
-cp $DOTFILES_DIR/zsh/zshrc-mint ~/.zshrc
 chsh -s /bin/zsh $USER
 chsh -s /bin/zsh root
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
