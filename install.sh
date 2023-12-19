@@ -152,5 +152,5 @@ zsh ./install.zsh --branch release-v1
 
 cp ~/dotfiles/zsh/.zshrc ~/.zshrc
 
-rm -r ~/.local/share/zap/plugins/zap-prompt
-cp ~/dotfiles/zsh/zap-prompt ~/.local/share/zap/plugins
+sudo rm -r ~/.local/share/zap/plugins/zap-prompt
+cp -r ~/dotfiles/zsh/zap-prompt ~/.local/share/zap/plugins
