@@ -33,3 +33,7 @@ pavucontrol
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+lxappearance xfce4-settings
+waybar hyprpaper
+
