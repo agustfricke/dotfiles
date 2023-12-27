@@ -48,6 +48,8 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 # open file exporer
 bindsym $mod+e exec nautilus
+# open blue-manager
+bindsym $mod+b exec blueman-manager
 
 # kill focused window
 bindsym $mod+q kill
