@@ -11,6 +11,7 @@ directories=$( (find "$personal_dir" -mindepth 0 -maxdepth 2 -type d && find "$w
 if [ -n "$directories" ]; then
     # Inicia una sesión de Tmux en el directorio seleccionado
     tmux new-session -c "$directories"
+    vim .
 else
     echo "Ningún directorio seleccionado."
 fi
