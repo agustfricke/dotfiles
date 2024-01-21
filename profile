@@ -4,3 +4,4 @@ if [[ "$(tty)" == "/dev/tty1" ]]
   exec Hyprland
   # do whatever you want here
 fi
+EBPQBUSBX4ZMROKNRPEFQ2E
