@@ -14,11 +14,7 @@ sudo make install
 # Copy i3 and i3blocks config
 cp -r ~/dotfiles/i3 ~/.config/i3
 cp -r ~/dotfiles/i3blocks ~/.config/i3blocks
-git clone https://github.com/vivien/i3blocks-contrib.git ~/scripts
-mv ~/scripts ~/.config/i3blocks
-
-# Rofi 
-cp -r ~/dotfiles/rofi ~/.config
+git clone https://github.com/vivien/i3blocks-contrib.git ~/.config/i3blocks/scripts
 
 # Font
 wget -O ~/FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip
@@ -30,8 +26,7 @@ source "$HOME/.cargo/env"
 
 # Node
 wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/
-mkdir -p ~/.node
-tar -xf ~/node-v20.10.0-linux-x64.tar.xz -C ~/.node --strip-components=1
+sudo tar -C /usr/local -xzf ~/node-v20.10.0-linux-x64.tar.xz
 
 # Go
 wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz -P ~/
@@ -60,39 +55,17 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 # Neovim
 wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-chmod u+x nvim.appimage
+chmod +x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/vim
 
-# Set Wallpaper
+# Wallpaper
 mv ~/dotfiles/Wallpapers ~/Pictures
 
-# Install Brave Browser
-sudo apt install curl -y
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser -y
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-
-# Install OBS
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:obsproject/obs-studio -y
-sudo apt update -y
-sudo apt install obs-studio -y
-
-# Install Audacity
-sudo apt install audacity -y
-
-# Install Kdenlive
-sudo add-apt-repository ppa:kdenlive/kdenlive-stable -y
-sudo apt update -y
-sudo apt install kdenlive -y
-
-# Install fzf
+# fzf
 sudo apt install fzf -y
-sudo mv ~/dotfiles/tools/f /usr/local/bin
+sudo cp ~/dotfiles/tools/f /usr/local/bin
 
-# Install tmux
+# tmux
 sudo apt install tmux -y
 cp ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
@@ -108,19 +81,10 @@ directories_to_remove=(
     ~/Public
     ~/Templates
 )
-
 for item in "${directories_to_remove[@]}"; do
     sudo rm -r "$item"
 done
 
-# Create folders
-mkdir personal
-mkdir work
-
-# GitHub SSH
-ssh-keygen -t ed25519 -C "agustfricke@protonmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
 
 # Install Virt Manager
 sudo apt install qemu-kvm qemu-system qemu-utils python3 python3-pip libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
@@ -138,10 +102,7 @@ cp -r ~/dotfiles/nvim ~/.config
 
 # Install zsh
 sudo apt install zsh -y
-
-# Copy zsh config
-chsh -s /bin/zsh $USER
-chsh -s /bin/zsh root
+chsh -s $(which zsh) $USER
 
 # pnpm
 wget -qO- https://get.pnpm.io/install.sh | sh -
