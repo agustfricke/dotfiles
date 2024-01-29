@@ -72,12 +72,12 @@ interval=30
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
 #IFACE=wlan0
-command=$SCRIPT_DIR/iface/iface
+# command=$SCRIPT_DIR/iface/iface
 interval=10
 separator=false
 
 [wifi]
-#INTERFACE=wlp3s0
+# INTERFACE=wlan0
 label=  
 command=$SCRIPT_DIR/wifi/wifi
 interval=10
@@ -106,14 +106,14 @@ interval=10
 # The battery instance defaults to 0.
 [battery]
 command=$SCRIPT_DIR/battery/battery
-label=⚡
+# label=⚡
 interval=30
 
 
 # Date Time
 #
 [time]
-command=date '+   %H:%M      %d-%m  '
+command=date '+   %H:%M    %d-%m  '
 interval=5
 
 # Generic media player support
