@@ -10,15 +10,17 @@ git clone https://github.com/Airblader/i3blocks-gaps ~/i3blocks
 cd ~/i3blocks
 make clean debug
 sudo make install
+sudo rm -r ~/i3blocks
 
 # Copy i3 and i3blocks config
 cp -r ~/dotfiles/i3 ~/.config/i3
 cp -r ~/dotfiles/i3blocks ~/.config/i3blocks
 git clone https://github.com/vivien/i3blocks-contrib.git ~/.config/i3blocks/scripts
 
-# Font
+# Fira Code font
 wget -O ~/FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip
 unzip ~/FiraCode.zip -d ~/.local/share/fonts
+rm ~/FiraCode.zip
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -26,11 +28,14 @@ source "$HOME/.cargo/env"
 
 # Node
 wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/
-sudo tar -C /usr/local -xzf ~/node-v20.10.0-linux-x64.tar.xz
+tar -xf ~/node-v20.10.0-linux-x64.tar.xz
+sudo mv ~/node-v20.10.0-linux-x64 /usr/local/node
+rm ~/node-v20.10.0-linux-x64.tar.xz
 
 # Go
 wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz -P ~/
 sudo tar -C /usr/local -xzf ~/go1.21.5.linux-amd64.tar.gz
+rm ~/go1.21.5.linux-amd64.tar.gz
 
 # Alacritty
 git clone https://github.com/alacritty/alacritty.git ~/alacritty
@@ -39,6 +44,7 @@ cd ~/alacritty
 cargo build --release
 sudo cp ~/alacritty/target/release/alacritty /usr/local/bin
 cp -r ~/dotfiles/alacritty ~/.config
+sudo rm -r ~/alacritty
 
 # Docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -61,30 +67,9 @@ sudo mv nvim.appimage /usr/local/bin/vim
 # Wallpaper
 mv ~/dotfiles/Wallpapers ~/Pictures
 
-# fzf
-sudo apt install fzf -y
-sudo cp ~/dotfiles/tools/f /usr/local/bin
-
 # tmux
 sudo apt install tmux -y
 cp ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-
-# Delete folders
-directories_to_remove=(
-    ~/FiraCode.zip
-    ~/alacritty
-    ~/Desktop
-    ~/i3blocks
-    ~/node-*.tar.xz  
-    ~/go*.linux-amd64.tar.gz
-    ~/Music
-    ~/Public
-    ~/Templates
-)
-for item in "${directories_to_remove[@]}"; do
-    sudo rm -r "$item"
-done
-
 
 # Install Virt Manager
 sudo apt install qemu-kvm qemu-system qemu-utils python3 python3-pip libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
