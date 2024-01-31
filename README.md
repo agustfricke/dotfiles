@@ -2,22 +2,22 @@
 
 ## Install and config in Linux Mint
 ```bash
-git clone https://github.com/agustfricke/dotfiles.git
-cd dotfiles
-./install-linuxmint
+wget -qO- https://github.com/agustfricke/dotfiles/install.sh | sh -
 ```
 
 ## Neovim config
-- After install, enter in **~/.config/nvim/lua/agust/packer.lua** and execute **:so** and **:PackerSync**
+- After install, enter in **~/.config/nvim/lua/agust/packer.lua** and execute the commands **:so** and **:PackerSync**.
 
 ## Theme
-- Execute the command to set a theme
 ```bash
 lxappearance
 ```
 
 ## Extra
 - Inside of dotfiles/extra you will find some other software instructions such as how to install Brave, OBS, etc.
+```bash
+wget -qO- https://github.com/agustfricke/dotfiles/extra.sh | sh -
+```
 
 ![Screenshot 2023-11-02 03-14-47](https://github.com/agustfricke/dotfiles/assets/110266171/1da8e3c0-dc1e-4130-a33b-f642def1f910)
 ![Screenshot 2023-11-02 03-13-55](https://github.com/agustfricke/dotfiles/assets/110266171/4b1273a1-1a15-4297-bd24-c207cf5e6b16)
