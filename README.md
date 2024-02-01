@@ -1,28 +1,2 @@
-# personal dotfiles for linux mint
+### ACTUALIZANDO EL REPOSITORIO, PROXIMAMENTE NUEVO VIDEO EN YOUTUBE
 
-## Install and config in Linux Mint
-```bash
-wget -qO- https://github.com/agustfricke/dotfiles/install.sh | sh -
-```
-
-## Neovim config
-- After install, enter in **~/.config/nvim/lua/agust/packer.lua** and execute the commands **:so** and **:PackerSync**.
-
-## Theme
-```bash
-lxappearance
-```
-
-## Extra
-- Inside of dotfiles/extra you will find some other software instructions such as how to install Brave, OBS, etc.
-```bash
-wget -qO- https://github.com/agustfricke/dotfiles/extra.sh | sh -
-```
-
-![Screenshot 2023-11-02 03-14-47](https://github.com/agustfricke/dotfiles/assets/110266171/1da8e3c0-dc1e-4130-a33b-f642def1f910)
-![Screenshot 2023-11-02 03-13-55](https://github.com/agustfricke/dotfiles/assets/110266171/4b1273a1-1a15-4297-bd24-c207cf5e6b16)
-
-
-## ARCH WITH HYPRLAND
-![2023-12-21T00:27:08,130841322-03:00](https://github.com/agustfricke/dotfiles/assets/110266171/21d96287-dffb-4cc4-9482-b78cb552ec57)
-![2023-12-21T00:27:27,036339299-03:00](https://github.com/agustfricke/dotfiles/assets/110266171/fedd1b90-8c02-42c7-a87b-185a463c3b99)
