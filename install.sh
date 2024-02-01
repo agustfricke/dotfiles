@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update && sudo apt upgrade -y
-sudo apt install kitty gimp tmux i3 git build-essential feh lxappearance arc-theme xclip -y 
+sudo apt install fzf kitty gimp tmux i3 git build-essential feh lxappearance arc-theme xclip -y 
 git clone https://github.com/agustfricke/dotfiles.git ~/dotfiles
 
 cp -r ~/dotfiles/i3 ~/.config/i3
