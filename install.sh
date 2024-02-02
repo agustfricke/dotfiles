@@ -54,13 +54,16 @@ sudo usermod -aG disk $USER
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
 cp -r ~/dotfiles/nvim ~/.config
 
-sudo apt install zsh -y 
-cp ~/dotfiles/linux-mint/zsh/.zshrc ~/.zshrc
 
 wget -qO- https://get.pnpm.io/install.sh | sh - 
 
+sudo apt install zsh -y 
+
 curl -sLO https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh
 zsh ./install.zsh --branch release-v1
+
+cp ~/dotfiles/linux-mint/zsh/.zshrc ~/.zshrc
+
 
 sudo apt install curl -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
