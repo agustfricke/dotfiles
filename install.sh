@@ -40,7 +40,7 @@ sudo mv nvim.appimage /usr/local/bin/vim
 mv ~/dotfiles/Wallpapers ~/Pictures
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-cp ~/dotfiles/linux-mint/tmux ~/.config
+cp -r ~/dotfiles/linux-mint/tmux ~/.config
 
 sudo apt install qemu-kvm qemu-system qemu-utils python3 python3-pip libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
 sudo virsh net-start default 
@@ -59,13 +59,9 @@ chsh -s $(which zsh) $USER
 
 wget -qO- https://get.pnpm.io/install.sh | sh - 
 
+# !
 curl -sLO https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh
 zsh ./install.zsh --branch release-v1
-cp ~/dotfiles/linux-mint/zsh/.zshrc ~/.zshrc
-sudo rm -r ~/.local/share/zap/plugins/zap-prompt
-cp -r ~/dotfiles/linux-mint/zsh/zap-prompt ~/.local/share/zap/plugins
-sudo rm ~/.local/share/zap/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-cp -r ~/dotfiles/linux-mint/zsh/zsh-vi-mode.plugin.zsh ~/.local/share/zap/plugins/zsh-vi-mode
 
 sudo apt install curl -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -88,6 +84,7 @@ sudo apt install kdenlive -y
 ssh-keygen -t ed25519 -C "agustfricke@protonmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
+
 
 mkdir personal
 mkdir work
