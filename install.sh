@@ -59,7 +59,6 @@ chsh -s $(which zsh) $USER
 
 wget -qO- https://get.pnpm.io/install.sh | sh - 
 
-# !
 curl -sLO https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh
 zsh ./install.zsh --branch release-v1
 
@@ -81,10 +80,6 @@ sudo add-apt-repository ppa:kdenlive/kdenlive-stable -y
 sudo apt update -y
 sudo apt install kdenlive -y
 
-ssh-keygen -t ed25519 -C "agustfricke@protonmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-
-
 mkdir personal
 mkdir work
+mkdir kvm
