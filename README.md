@@ -12,15 +12,14 @@ wget -O - https://raw.githubusercontent.com/agustfricke/dotfiles/main/install.sh
 - For tmux theme, press prefix and then capital **i** to install the theme plugin.
 
 
-##### Zsh
+##### Zsh zap
+- For a block cursor with the zsh-vi-mode, set this line in **~/.local/share/zap/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh**
 ```bash
-cp ~/dotfiles/linux-mint/zsh/.zshrc ~/.zshrc
+ZVM_CURSOR_STYLE_ENABLED=false
 
-rm ~/.local/share/zap/plugins/zap-prompt/zap-prompt.zsh-theme
-cp -r ~/dotfiles/linux-mint/zsh/zap-prompt.zsh-theme ~/.local/share/zap/plugins/zap-prompt
-
-rm ~/.local/share/zap/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-cp -r ~/dotfiles/linux-mint/zsh/zsh-vi-mode.plugin.zsh ~/.local/share/zap/plugins/zsh-vi-mode
+For the prompt, edit the file ~/.local/share/zap/plugins/zap-prompt/zap-prompt.zsh-theme
 ```
+
+- For the prompt, edit the file ~/.local/share/zap/plugins/zap-prompt/zap-prompt.zsh-theme
 
 https://github.com/agustfricke/dotfiles/assets/110266171/0cdecfda-fa4b-4a20-ad82-114e6f256d13

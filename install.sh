@@ -55,7 +55,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 cp -r ~/dotfiles/nvim ~/.config
 
 sudo apt install zsh -y 
-chsh -s $(which zsh) $USER
+cp ~/dotfiles/linux-mint/zsh/.zshrc ~/.zshrc
 
 wget -qO- https://get.pnpm.io/install.sh | sh - 
 
