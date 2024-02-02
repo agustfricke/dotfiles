@@ -13,13 +13,11 @@ wget -O - https://raw.githubusercontent.com/agustfricke/dotfiles/main/install.sh
 
 
 ##### Zsh zap
-- For a block cursor with the zsh-vi-mode, set this line in **~/.local/share/zap/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh**
+- For a block cursor with the zsh-vi-mode, set this line in **~/.local/share/zap/plugins/zsh-vi-mode/zsh-vi-mode.zsh**
 ```bash
 ZVM_CURSOR_STYLE_ENABLED=false
-
-For the prompt, edit the file ~/.local/share/zap/plugins/zap-prompt/zap-prompt.zsh-theme
 ```
 
-- For the prompt, edit the file ~/.local/share/zap/plugins/zap-prompt/zap-prompt.zsh-theme
+- For the prompt, edit the file **~/.local/share/zap/plugins/zap-prompt/zap-prompt.zsh-theme**
 
 https://github.com/agustfricke/dotfiles/assets/110266171/0cdecfda-fa4b-4a20-ad82-114e6f256d13
