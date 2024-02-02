@@ -184,7 +184,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status -c ~/.config/i3/i3status.conf
-	position top
+	      position top
       	tray_output DP-4
 
       	colors {
