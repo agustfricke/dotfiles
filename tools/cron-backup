@@ -1,0 +1,10 @@
+list -- crontab -l
+crontab -e
+0 0 * * * /home/admin/backup.sh
+
+# backup.sh
+current_datetime=$(date +"%Y-%m-%d %H:%M:%S")
+git -C /home/admin/backend add /home/agust/backend
+git -C /home/admin/backend commit -m "Commit realizado el $current_datetime"
+git -C /home/admin/backend push
+
