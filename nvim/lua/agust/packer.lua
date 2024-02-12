@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
     },
   }
 
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use "folke/tokyonight.nvim"
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -54,3 +54,4 @@ return require('packer').startup(function(use)
         }
     }
 end)
+
