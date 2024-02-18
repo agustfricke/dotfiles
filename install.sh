@@ -58,6 +58,7 @@ cp -r ~/dotfiles/nvim ~/.config
 wget -qO- https://get.pnpm.io/install.sh | sh - 
 
 sudo apt install zsh -y 
+chsh -s $(which zsh)
 
 curl -sLO https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh
 zsh ./install.zsh --branch release-v1
