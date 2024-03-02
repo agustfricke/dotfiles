@@ -20,4 +20,3 @@ ZVM_CURSOR_STYLE_ENABLED=false
 
 - For the prompt, edit the file **~/.local/share/zap/plugins/zap-prompt/zap-prompt.zsh-theme**
 
-https://github.com/agustfricke/dotfiles/assets/110266171/0cdecfda-fa4b-4a20-ad82-114e6f256d13
