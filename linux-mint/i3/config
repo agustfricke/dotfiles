@@ -202,7 +202,7 @@ bar {
 
 # remove the title of the window
 new_window pixel
-exec_always feh --bg-fill /home/agust/Pictures/Wallpapers/puente.png
+exec_always feh --bg-fill /home/agust/Pictures/Wallpapers/forest.jpg
 
 # keybinds
 bindsym $mod+p exec poweroff
