@@ -86,4 +86,4 @@ mkdir personal
 mkdir work
 mkdir kvm
 
-chsh -s $(which zsh)
+
