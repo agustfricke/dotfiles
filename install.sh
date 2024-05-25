@@ -12,6 +12,9 @@ wget -O ~/FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download
 unzip ~/FiraCode.zip -d ~/.local/share/fonts 
 rm ~/FiraCode.zip
 
+wget -P ~/.icons https://github.com/ful1e5/apple_cursor/releases/download/v2.0.1/macOS.tar.xz
+tar -xf ~/.icons/macOS.tar.xz -C ~/.icons
+
 wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/ 
 tar -xf ~/node-v20.10.0-linux-x64.tar.xz 
 sudo mv ~/node-v20.10.0-linux-x64 /usr/local/node
