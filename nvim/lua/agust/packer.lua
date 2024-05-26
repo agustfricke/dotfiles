@@ -18,6 +18,14 @@ return require('packer').startup(function(use)
 
   use "folke/tokyonight.nvim"
 
+  use({
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
+	  config = function()
+		  vim.cmd('colorscheme rose-pine')
+	  end
+  })
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
