@@ -4,7 +4,12 @@ require('lualine').setup {
   }
 }
 
-vim.cmd[[colorscheme tokyonight-night]]
+require("tokyonight").setup({
+  style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+  transparent = true, -- Enable this to disable setting the background color
+})
+vim.cmd[[colorscheme tokyonight]]
+
 --[[
 require("rose-pine").setup({
     variant = "auto", -- auto, main, moon, or dawn
