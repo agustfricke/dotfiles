@@ -1,0 +1,24 @@
+# Transfer files
+scp file.mp4 agust@IP:/home/agust
+
+vim ~/.vnc/xstartup
+#!/bin/bash
+exec /usr/bin/mate-session &
+
+# servers ip's
+ssh -L 5901:127.0.0.1:5901 agust@remote-ip
+
+# Config
+apt update 
+apt upgrade -y
+
+adduser agust
+usermod -aG sudo agust
+
+sudo apt-get install mate-desktop-environment tightvncserver -y
+
+vncserver :10
+vncserver -kill :10
+
+sudo apt --fix-broken install -y
+vim .vnc/xstartup
