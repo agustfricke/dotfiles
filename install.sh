@@ -12,9 +12,6 @@ wget -O ~/FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download
 unzip ~/FiraCode.zip -d ~/.local/share/fonts 
 rm ~/FiraCode.zip
 
-wget -P ~/.icons https://github.com/ful1e5/apple_cursor/releases/download/v2.0.1/macOS.tar.xz
-tar -xf ~/.icons/macOS.tar.xz -C ~/.icons
-
 wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/ 
 tar -xf ~/node-v20.10.0-linux-x64.tar.xz 
 sudo mv ~/node-v20.10.0-linux-x64 /usr/local/node
@@ -31,8 +28,6 @@ sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg  
 sudo chmod a+r /etc/apt/keyrings/docker.gpg 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" | sudo tee /etc/apt/sources.list.d/docker.list 
-sudo rm /etc/apt/sources.list.d/docker.list 
-sudo cp ~/dotfiles/linux-mint/docker.list /etc/apt/sources.list.d/docker.list
 sudo apt-get update -y 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y 
 
@@ -60,7 +55,6 @@ sudo usermod -aG disk $USER
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
 cp -r ~/dotfiles/nvim ~/.config
 
-
 wget -qO- https://get.pnpm.io/install.sh | sh - 
 
 sudo apt install zsh -y 
@@ -77,19 +71,7 @@ sudo apt update
 sudo apt install brave-browser -y
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:obsproject/obs-studio -y
-sudo apt update -y
-sudo apt install obs-studio -y
-
-sudo apt install audacity -y
-
-sudo add-apt-repository ppa:kdenlive/kdenlive-stable -y
-sudo apt update -y
-sudo apt install kdenlive -y
-
 mkdir personal
 mkdir work
-mkdir kvm
 
 
