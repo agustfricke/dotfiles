@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update && sudo apt upgrade -y
-sudo apt install fzf kitty gimp tmux i3 git build-essential feh lxappearance arc-theme xclip sqlite -y 
+sudo apt install fzf curl kitty gimp tmux i3 git build-essential feh lxappearance xclip sqlite3 libfuse2 -y 
 git clone https://github.com/agustfricke/dotfiles.git ~/dotfiles
 
 cp -r ~/dotfiles/linux-mint/kitty ~/.config
@@ -63,13 +63,6 @@ curl -sLO https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh
 zsh ./install.zsh --branch release-v1
 
 cp ~/dotfiles/linux-mint/zsh/.zshrc ~/.zshrc
-
-sudo apt install curl -y
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser -y
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
 mkdir personal
 mkdir work

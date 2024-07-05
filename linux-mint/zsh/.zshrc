@@ -11,6 +11,8 @@ echo -ne '\e[2 q'
 autoload -Uz compinit
 compinit
 
+export EDITOR=vim
+
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/.go" 
 export PATH=$PATH:$GOPATH/bin
