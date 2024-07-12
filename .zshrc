@@ -19,6 +19,8 @@ export PATH=$PATH:$GOPATH/bin
 
 export PATH=$PATH:$HOME/.local/share/node/bin
 
+export PATH=$PATH:$HOME/.local/share/vim
+
 export PNPM_HOME="/home/agust/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
