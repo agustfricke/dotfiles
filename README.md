@@ -25,8 +25,8 @@ rm ~/go1.22.5.linux-amd64.tar.gz
 
 - Node
 ```bash
-wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/ 
-tar -C ~/.local/share -xzf ~/node-v20.10.0-linux-x64.tar.xz 
+wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/
+tar -C ~/.local/share -xJf ~/node-v20.10.0-linux-x64.tar.xz
 rm ~/node-v20.10.0-linux-x64.tar.xz
 ```
 
