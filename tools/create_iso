@@ -1,6 +1,0 @@
-sha256sum image.iso
-sudo fdisk -l
-umount /dev/sda
-sudo mkfs.ext4 /dev/sda
-sudo dd if=image.iso of=/dev/sda/ status='progress'
-

@@ -1,4 +1,0 @@
-sudo systemctl enable ufw.service
-sudo systemctl status ufw.service
-sudo ufw enable
-sudo ufw status
