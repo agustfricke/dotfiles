@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Mostrar la lista de redes WiFi disponibles
+nmcli device wifi list
+
+# Solicitar el nombre de la red (SSID) al usuario
+read -p "Ingrese el nombre de la red (SSID): " SSID
+
+# Solicitar la contraseña al usuario de forma segura (sin mostrarla en la pantalla)
+read -p "Ingrese la contraseña: " PASSWORD
+echo  # Agregar un salto de línea después de la entrada de la contraseña
+
+# Conectar a la red WiFi utilizando nmcli
+nmcli device wifi connect "$SSID" password "$PASSWORD"

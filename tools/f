@@ -1,0 +1,12 @@
+#!/bin/bash
+
+personal_dir=~/personal
+work_dir=~/work
+
+directories=$( (find "$personal_dir" -mindepth 0 -maxdepth 2 -type d && find "$work_dir" -mindepth 1 -maxdepth 1 -type d) | fzf)
+
+if [ -n "$directories" ]; then
+    tmux new-session -c "$directories"
+else
+    echo "You must select a dir"
+fi

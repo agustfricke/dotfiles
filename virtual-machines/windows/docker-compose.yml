@@ -1,0 +1,20 @@
+version: "3"
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows
+    environment:
+      VERSION: "tiny10"
+      DISK_SIZE: "60G"
+      RAM_SIZE: "4G"
+      CPU_CORES: "2"
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "127.0.0.1:8006:8006"
+      - "127.0.0.1:3389:3389/tcp"
+      - "127.0.0.1:3389:3389/udp"
+    stop_grace_period: 2m
+    restart: on-failure

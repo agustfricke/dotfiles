@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Matar todas las sesiones de tmux
+tmux kill-server
+
+echo "All tmux sessions have been killed."

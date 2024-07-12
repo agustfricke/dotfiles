@@ -1,0 +1,9 @@
+#create disk
+qemu-img create -f qcow2 disco.qcow2 20G
+
+# create vm
+qemu-system-x86_64 -m 1300 -smp 2 --enable-kvm -name 'm1' -boot d -hda disco.qcow2 -cdrom image.iso 
+
+# power on
+qemu-system-x86_64 -m 1300 -smp 2 --enable-kvm -name 'm1' -boot d -hda disco.qcow2 
+
