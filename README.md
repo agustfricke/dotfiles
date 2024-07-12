@@ -47,7 +47,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```bash
 wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage  
 chmod +x nvim.appimage
-sudo mv nvim.appimage ~/.local/share/vim
+sudo mv nvim.appimage /usr/local/bin/vim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
 ```
 
@@ -80,7 +80,7 @@ wget -qO- https://get.pnpm.io/install.sh | sh -
 
 - Installation
 ```bash
-git clone https://github.com/agust/.dotfiles.git $HOME/.dotfiles
+git clone https://github.com/agustfricke/dotfiles.git $HOME/.dotfiles
 cd .dotfiles
 stow .
 ```
