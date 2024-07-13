@@ -43,11 +43,8 @@ sudo apt-get update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y 
 ```
 
-- Neovim && Packer
+- Packer
 ```bash
-wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage  
-chmod +x nvim.appimage
-mv nvim.appimage ~/.local/bin/vim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
 ```
 
@@ -73,10 +70,28 @@ sudo usermod -aG disk $USER
 wget -qO- https://get.pnpm.io/install.sh | sh - 
 ```
 
+- .profile
+```bash
+mv ~/.profile ~/.profile.old
+```
+
 - Installation
 ```bash
-stow -R -v -t ~ vim
-git clone https://github.com/agustfricke/dotfiles.git $HOME/.dotfiles
+git clone https://github.com/agustfricke/dotfiles.git ~/.dotfiles
 cd .dotfiles
-stow --adopt .
+stow */ 
 ```
+
+- Tmux
+```bash
+tmux
+tmux source ~/.config/tmux/tmux.conf
+```
+- For installing the plugins for tmux press Prefix(Ctrl+a) + I(Capital i)
+
+- Neovim
+```bash
+vim ~/.config/nvim/lua/agust/packer.lua
+# install with :so and :PackerSync
+```
+
