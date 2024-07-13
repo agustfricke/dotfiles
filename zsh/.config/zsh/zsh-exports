@@ -6,5 +6,7 @@ export PATH=$PATH:$HOME/.local/share/node/bin
 export PATH="$HOME/.local/bin":$PATH
 export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
+
 export PATH=$HOME/.local/share/go/bin:$PATH
-export GOPATH=$HOME/.local/share/go
+export GOPATH=$HOME/.local/share/.go
+export PATH=$PATH:$GOPATH/bin
