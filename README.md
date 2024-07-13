@@ -47,7 +47,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```bash
 wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage  
 chmod +x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/vim
+mv nvim.appimage ~/.local/bin/vim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
 ```
 
@@ -68,11 +68,6 @@ sudo usermod -aG input $USER
 sudo usermod -aG disk $USER 
 ```
 
-- Zap zsh plugin manager 
-```bash
-zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-```
-
 - Pnpm
 ```bash
 wget -qO- https://get.pnpm.io/install.sh | sh - 
@@ -80,7 +75,8 @@ wget -qO- https://get.pnpm.io/install.sh | sh -
 
 - Installation
 ```bash
+stow -R -v -t ~ vim
 git clone https://github.com/agustfricke/dotfiles.git $HOME/.dotfiles
 cd .dotfiles
-stow .
+stow --adopt .
 ```
