@@ -19,7 +19,7 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 - Go
 ```bash
 wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz -P ~/
-sudo tar -C ~/.local/share -xzf ~/go1.22.5.linux-amd64.tar.gz  
+tar -C ~/.local/share -xzf ~/go1.22.5.linux-amd64.tar.gz  
 rm ~/go1.22.5.linux-amd64.tar.gz 
 ```
 

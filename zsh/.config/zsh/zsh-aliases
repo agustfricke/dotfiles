@@ -10,9 +10,9 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # switch to other tmux session
-alias stx='tmux switch-client -t '
+alias stx='tmux switch-client -t'
 # kill tmux session
-alias ktx='tmux kill-session -t '
+alias ktx='tmux kill-session -t'
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
