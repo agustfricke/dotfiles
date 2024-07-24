@@ -3,7 +3,7 @@
 - Basic dependencies
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install stow fzf zsh curl kitty gimp tmux i3 git build-essential feh lxappearance xclip sqlite3 libfuse2 ripgrep -y 
+sudo apt install stow fzf blueman zsh curl kitty gimp tmux i3 git build-essential feh lxappearance xclip sqlite3 libfuse2 ripgrep -y 
 ```
 
 - Webkit
@@ -72,14 +72,19 @@ wget -qO- https://get.pnpm.io/install.sh | sh -
 
 - .profile
 ```bash
-mv ~/.profile ~/.profile.old
+mv ~/.dotfiles/.profile ~/
 ```
 
 - Installation
 ```bash
 git clone https://github.com/agustfricke/dotfiles.git ~/.dotfiles
 cd .dotfiles
-stow */ 
+stow bin 
+stow i3
+stow kitty
+stow nvim
+stow tmux
+stow zsh
 ```
 
 - Tmux
