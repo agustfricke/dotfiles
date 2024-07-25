@@ -70,21 +70,26 @@ sudo usermod -aG disk $USER
 wget -qO- https://get.pnpm.io/install.sh | sh - 
 ```
 
-- .profile
+- Get RobotoMonoNerdFont
 ```bash
-mv ~/.dotfiles/.profile ~/
+mkdir ~/.local/share/fonts
+wget -O ~/RobotoMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/RobotoMono.zip
+unzip ~/RobotoMono.zip -d ~/.local/share/fonts 
+rm ~/RobotoMono.zip
 ```
 
-- Installation
+- Installation 
 ```bash
 git clone https://github.com/agustfricke/dotfiles.git ~/.dotfiles
 cd .dotfiles
+mv ~/.dotfiles/.profile ~/
 stow bin 
 stow i3
 stow kitty
 stow nvim
 stow tmux
 stow zsh
+# reboot your machine!
 ```
 
 - Tmux
