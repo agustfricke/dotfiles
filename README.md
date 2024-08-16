@@ -26,7 +26,7 @@ rm ~/go1.22.5.linux-amd64.tar.gz
 - Node
 ```bash
 wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/
-tar -C ~/.local/share -xJf ~/node-v20.10.0-linux-x64.tar.xz
+tar -C ~/.local/share/node -xJf ~/node-v20.10.0-linux-x64.tar.xz
 rm ~/node-v20.10.0-linux-x64.tar.xz
 ```
 
@@ -82,7 +82,7 @@ rm ~/RobotoMono.zip
 ```bash
 git clone https://github.com/agustfricke/dotfiles.git ~/.dotfiles
 cd .dotfiles
-mv ~/.dotfiles/.profile ~/
+stow x
 stow bin 
 stow i3
 stow kitty
