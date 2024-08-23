@@ -2,7 +2,7 @@
 HISTFILE=/home/agust/.config/zsh/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-export PATH=$PATH:$HOME/.local/share/node/bin
+export PATH=$PATH:$HOME/.local/share/node-v20.10.0-linux-x64/bin
 export PATH="$HOME/.local/bin":$PATH
 export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
