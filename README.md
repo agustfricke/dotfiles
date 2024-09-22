@@ -1,6 +1,6 @@
 # .dotfiles
 
-- Dependencies
+## Dependencies
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install stow fzf blueman zsh curl kitty gimp tmux i3 git build-essential feh lxappearance xclip sqlite3 libfuse2 ripgrep -y 
@@ -42,7 +42,7 @@ unzip ~/RobotoMono.zip -d ~/.local/share/fonts
 rm ~/RobotoMono.zip
 ```
 
-- Installation 
+## Installation 
 ```bash
 git clone https://github.com/agustfricke/dotfiles.git ~/.dotfiles
 cd .dotfiles
