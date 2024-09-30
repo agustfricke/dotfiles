@@ -2,8 +2,15 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
--- Fix Undefined global 'vim'
 lsp.nvim_workspace()
+
+lsp.ensure_installed({
+    'lua_ls', 
+    'ts_ls', 
+    'gopls', 
+    'astro', 
+    'tailwindcss', 
+})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
