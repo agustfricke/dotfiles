@@ -208,7 +208,7 @@ exec_always monitor
 # keybinds
 bindsym $mod+p exec poweroff
 bindsym $mod+e exec nautilus
-bindsym $mod+b exec google-chrome
+bindsym $mod+b exec firefox
 bindsym $mod+Shift+b exec blueman-manager
 bindsym $mod+Shift+s exec gimp -b '(plug-in-screenshot 0 FALSE 0 0 0 0 0)'
 
