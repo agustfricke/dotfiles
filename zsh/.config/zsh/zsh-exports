@@ -1,5 +1,5 @@
 #!/bin/sh
-HISTFILE=/home/agust/.config/zsh/.zsh_history
+HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 export PATH=$PATH:$HOME/.local/share/node-v20.10.0-linux-x64/bin

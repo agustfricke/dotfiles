@@ -14,8 +14,12 @@ tar -C ~/.local/share -xzf ~/go1.22.5.linux-amd64.tar.gz
 rm ~/go1.22.5.linux-amd64.tar.gz 
 # Node
 wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/
-tar -C ~/.local/share/node -xJf ~/node-v20.10.0-linux-x64.tar.xz
+tar -C ~/.local/share -xJf ~/node-v20.10.0-linux-x64.tar.xz
 rm ~/node-v20.10.0-linux-x64.tar.xz
+# Neovim
+wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -P ~/
+chmod u+x ~/nvim.appimage
+sudo mv ~/nvim.appimage /usr/local/bin/vim
 # Docker
 sudo apt-get remove docker docker-engine docker.io containerd runc 
 sudo apt-get update 
@@ -56,3 +60,17 @@ stow zsh
 # reboot machine and select i3 WM
 ```
 
+# GitHub ssh
+Generating a new SSH key
+```bash
+ssh-keygen -t ed25519 -C "agustfricke@protonmail.com"
+```
+Start the ssh-agent in the background and add your SSH private key to the ssh-agent
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+Copy and past to your GitHub account
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
