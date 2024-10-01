@@ -57,6 +57,7 @@ stow kitty
 stow nvim
 stow tmux
 stow zsh
+mkdir ~/personal ~/work
 # reboot machine and select i3 WM
 ```
 
