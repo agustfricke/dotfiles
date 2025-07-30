@@ -2,7 +2,8 @@
 HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-export PATH=$PATH:$HOME/.local/share/node-v20.10.0-linux-x64/bin
+#export PATH=$PATH:$HOME/.local/share/node-v20.10.0-linux-x64/bin
+export PATH=$PATH:$HOME/.local/share/node-v22.17.1-linux-x64/bin
 export PATH="$HOME/.local/bin":$PATH
 export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
@@ -10,3 +11,9 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/.go
 export PATH=$PATH:$GOPATH/bin
+
+export PNPM_HOME="/home/agust/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac

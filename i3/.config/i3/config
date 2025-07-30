@@ -84,7 +84,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-# bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -208,7 +208,7 @@ exec_always monitor
 # keybinds
 bindsym $mod+p exec poweroff
 bindsym $mod+e exec nautilus
-bindsym $mod+b exec firefox
+#bindsym $mod+b exec firefox
 bindsym $mod+Shift+b exec blueman-manager
 bindsym $mod+Shift+s exec gimp -b '(plug-in-screenshot 0 FALSE 0 0 0 0 0)'
 

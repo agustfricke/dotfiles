@@ -13,13 +13,13 @@ wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz -P ~/
 tar -C ~/.local/share -xzf ~/go1.22.5.linux-amd64.tar.gz  
 rm ~/go1.22.5.linux-amd64.tar.gz 
 # Node
-wget https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz -P ~/
-tar -C ~/.local/share -xJf ~/node-v20.10.0-linux-x64.tar.xz
-rm ~/node-v20.10.0-linux-x64.tar.xz
+wget https://nodejs.org/dist/v22.17.1/node-v22.17.1-linux-x64.tar.xz -P ~/
+tar -C ~/.local/share -xJf ~/node-v22.17.1-linux-x64.tar.xz
+rm ~/node-v22.17.1-linux-x64.tar.xz
 # Neovim
-wget https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.appimage -P ~/
-chmod u+x ~/nvim-linux-x86_64.appimage 
-sudo mv ~/nvim-linux-x86_64.appimage /usr/local/bin/vim
+wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -P ~/
+chmod u+x ~/nvim.appimage
+sudo mv ~/nvim.appimage /usr/local/bin/vim
 # Docker
 sudo apt-get remove docker docker-engine docker.io containerd runc 
 sudo apt-get update 
