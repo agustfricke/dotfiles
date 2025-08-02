@@ -1,25 +1,32 @@
 # .dotfiles
 
-## Dependencies
+## Dependencies & Apps
 ```bash
+# Dependencies
 sudo apt update && sudo apt upgrade -y
 sudo apt install stow fzf blueman zsh curl kitty gimp tmux i3 git build-essential feh lxappearance xclip sqlite3 libfuse2 ripgrep -y 
-# webkit
+
+# Webkit
 sudo apt install libwebkit2gtk-4.0-dev file libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev -y
-# rust
+
+# Rust
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y
-# go
+
+# Go
 wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz -P ~/
 tar -C ~/.local/share -xzf ~/go1.22.5.linux-amd64.tar.gz  
 rm ~/go1.22.5.linux-amd64.tar.gz 
+
 # Node
 wget https://nodejs.org/dist/v22.17.1/node-v22.17.1-linux-x64.tar.xz -P ~/
 tar -C ~/.local/share -xJf ~/node-v22.17.1-linux-x64.tar.xz
 rm ~/node-v22.17.1-linux-x64.tar.xz
+
 # Neovim
-wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -P ~/
+wget https://github.com/neovim/neovim/releases/download/v0.10.1/nvim.appimage -P ~/
 chmod u+x ~/nvim.appimage
 sudo mv ~/nvim.appimage /usr/local/bin/vim
+
 # Docker
 sudo apt-get remove docker docker-engine docker.io containerd runc 
 sudo apt-get update 
@@ -30,6 +37,7 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" | sudo tee /etc/apt/sources.list.d/docker.list 
 sudo apt-get update -y 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y 
+
 # KVM
 sudo apt install qemu-kvm qemu-system qemu-utils python3 python3-pip libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
 sudo virsh net-start default 
@@ -39,11 +47,18 @@ sudo usermod -aG libvirt-qemu $USER
 sudo usermod -aG kvm $USER 
 sudo usermod -aG input $USER 
 sudo usermod -aG disk $USER 
+
 # Roboto Mono Nerd Font
 mkdir ~/.local/share/fonts
 wget -O ~/RobotoMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/RobotoMono.zip
 unzip ~/RobotoMono.zip -d ~/.local/share/fonts 
 rm ~/RobotoMono.zip
+
+# Zed Browser
+wget https://github.com/zen-browser/desktop/releases/latest/download/zen.linux-x86_64.tar.xz -P ~/
+tar -xf ~/zen.linux-x86_64.tar.xz 
+rm -rf ~/zen.linux-x86_64.tar.xz
+mv zen ~/.local/share
 ```
 
 ## Installation 
@@ -64,7 +79,7 @@ mkdir ~/personal ~/work
 # GitHub ssh
 Generating a new SSH key
 ```bash
-ssh-keygen -t ed25519 -C "agustfricke@protonmail.com"
+ssh-keygen -t ed25519 -C "hej@agustfricke.com"
 ```
 Start the ssh-agent in the background and add your SSH private key to the ssh-agent
 ```bash
