@@ -4,7 +4,7 @@
 ```bash
 # Dependencies
 sudo apt update && sudo apt upgrade -y
-sudo apt install stow fzf blueman zsh curl kitty gimp tmux i3 git build-essential feh lxappearance xclip sqlite3 libfuse2 ripgrep -y 
+sudo apt install stow fzf blueman zsh curl kitty gimp tmux i3 git build-essential feh lxappearance xclip sqlite3 libfuse2 ripgrep python3.10-venv -y 
 
 # Webkit
 sudo apt install libwebkit2gtk-4.0-dev file libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev -y
@@ -59,6 +59,7 @@ wget https://github.com/zen-browser/desktop/releases/latest/download/zen.linux-x
 tar -xf ~/zen.linux-x86_64.tar.xz 
 rm -rf ~/zen.linux-x86_64.tar.xz
 mv zen ~/.local/share
+ln -s /home/agust/.local/share/zen/zen ~/.local/bin/zen
 ```
 
 ## Installation 
