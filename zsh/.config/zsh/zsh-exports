@@ -4,6 +4,7 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 export PATH=$PATH:$HOME/.local/share/zen
+export PICO_SDK_PATH=/home/agust/personal/pi/pico-sdk
 
 export PATH=$PATH:$HOME/.local/share/node-v22.17.1-linux-x64/bin
 export PATH="$HOME/.local/bin":$PATH
